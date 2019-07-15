@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <style>
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+
+
+<div>
+    @{
+        foreach (var movie in ViewBag.Movies)
+        {
+            <div class="column">
+                    <a href="@Url.Action("Info", "Movies", movie)">
+                        <img class="myImg" src="@movie.Poster" alt="@movie.Title" style="width:100%"  />
+                    </a>
+            </div>
+        }
+    }
+</div>

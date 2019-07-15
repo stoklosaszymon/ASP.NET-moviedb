@@ -1,0 +1,16 @@
+﻿@model aaaaaa.Movies
+@{
+    ViewBag.Title = "Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    //var movie = ViewBag.Movie as Movies;
+
+    <div>
+        <h1>@Model.Title</h1>
+        <p> @Model.Director</p>
+        <p> @Model.Country</p>
+        <p> @Model.Genre</p>
+    </div>
+}
