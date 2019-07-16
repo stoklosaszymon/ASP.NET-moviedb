@@ -58,7 +58,7 @@ namespace aaaaaa.Controllers
         }
 
         [HttpGet]
-        public async Task<JsonResult> GetTopRatedMoviesJson(int count)
+        public async Task<JsonResult> GetTopRatedMoviesJson(int count = 6)
         {
             //string json = Newtonsoft.Json.JsonConvert.SerializeObject(a);
             var r = await Task.Run(() => db.GetAllMovies().OrderByDescending(e => e.imdbRating).Take(count));

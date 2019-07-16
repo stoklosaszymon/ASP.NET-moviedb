@@ -1,0 +1,66 @@
+﻿
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.col1 {
+    margin: 10px 0 0 10px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 300px;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: none;
+    list-style-type: none;
+    flex-direction: column;
+    border-top: none;
+    background-color: white;
+    width: 350px;
+    overflow-y: auto;
+    height: 200px;
+    flex-direction: column;
+}
+
+input:focus ~ #suggestions {
+    display: flex;
+}
+
+#suggestions:hover {
+    display: flex;
+}
+
+.suggestionsTop {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: none;
+    list-style-type: none;
+    border-top: none;
+    background-color: white;
+    width: 350px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    height: 320px;
+}
+
+.suggestions div:hover {
+    background: #d3d3d3;
+    cursor: pointer;
+}
+
+.suggestions::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.suggestions {
+    -ms-overflow-style: none;
+}

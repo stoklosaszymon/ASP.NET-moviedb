@@ -1,0 +1,41 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.col,
+.row {
+    margin: 0px 0 0 0px;
+    display: flex;
+    position: relative;
+    width: 300px;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.sa {
+    justify-content: space-around;
+}
+
+.asd {
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.asd__img {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.asd__title,
+.asd__description {
+    display: flex;
+    justify-content: center;
+}
