@@ -15,16 +15,15 @@
 
 .suggestions {
     position: absolute;
+    width: 350px;
+    max-height: 240px;
     top: 100%;
-    width: 100%;
     display: none;
     list-style-type: none;
     flex-direction: column;
     border-top: none;
     background-color: white;
-    width: 350px;
     overflow-y: auto;
-    height: 200px;
     flex-direction: column;
 }
 
@@ -38,18 +37,17 @@ input:focus ~ #suggestions {
 
 .suggestionsTop {
     position: absolute;
+    width: 350px;
+    height: 320px;
     top: 100%;
-    width: 100%;
     display: none;
     list-style-type: none;
     border-top: none;
     background-color: white;
-    width: 350px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
-    height: 320px;
 }
 
 .suggestions div:hover {
@@ -63,4 +61,16 @@ input:focus ~ #suggestions {
 
 .suggestions {
     -ms-overflow-style: none;
+}
+
+.top-rated {
+    transition: transform .2s;
+    margin: 5px 5px 5px 5px;
+    width: 100px;
+    height: 150px;
+}
+
+.top-rated:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }

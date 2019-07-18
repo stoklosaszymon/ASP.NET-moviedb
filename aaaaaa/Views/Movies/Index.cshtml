@@ -4,29 +4,38 @@
 }
 
     <style>
-        .column {
+        .movieTable {
+            margin-top: 20px;
             float: left;
-            width: 33.33%;
             padding: 5px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 100%;
+            justify-content: center;
         }
 
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
+        .myImg {
+            margin: 10px 10px 10px 10px;
+            width:150px;
+            height:243px;
+            transition: transform .2s
         }
+
+        .myImg:hover {
+            transform: scale(1.1);
+        }
+
     </style>
 
 
-<div>
+<div class="movieTable">
     @{
         foreach (var movie in ViewBag.Movies)
         {
-            <div class="column">
-                    <a href="@Url.Action("Info", "Movies", movie)">
-                        <img class="myImg" src="@movie.Poster" alt="@movie.Title" style="width:100%"  />
-                    </a>
-            </div>
+                <a href="@Url.Action("Info", "Movies", movie)">
+                    <img class="myImg" src="@movie.Poster" alt="@movie.Title"/>
+                </a>
         }
     }
 </div>
