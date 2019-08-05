@@ -24,7 +24,7 @@ namespace aaaaaa.Controllers
         [HttpPost]
         public ActionResult InfoPost(string title)
         {
-            return RedirectToAction("Info", "Movies", db.GetMovie(title));
+            return RedirectToAction("Info", "Movies", new { title = title });
         }
 
         [Route("Movies/MovieById/{id}")]
